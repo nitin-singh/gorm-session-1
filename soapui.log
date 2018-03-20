@@ -1,0 +1,3 @@
+2018-03-20 16:58:39,486 WARN  [DefaultSoapUICore] Missing folder [/home/nitin/ext] for external libraries
+2018-03-20 16:58:39,647 INFO  [DefaultSoapUICore] initialized soapui-settings from [/home/nitin/soapui-settings.xml]
+2018-03-20 16:58:40,005 INFO  [WorkspaceImpl] Loading workspace from [/home/nitin/intellij-soapui-workspace.xml]
