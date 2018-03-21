@@ -3,18 +3,18 @@ package gormdemo1
 class BootStrap {
 
     def init = { servletContext ->
-//        List<User> users = createUsers()
-//        addFriends(users)
-//        logFriends(users)
-//        removeFriends(users)
-//        logFriends(users)
-//        User user = createAndAddBook()
-//        log.info "---------Before remove :: User ${user.books} : ${user.books.size()}---------------"
-//        removingBook(user, Book.first())
+        List<User> users = createUsers()
+        addFriends(users)
+        logFriends(users)
+        removeFriends(users)
+        logFriends(users)
+        User user = createAndAddBook()
+        log.info "---------Before remove :: User ${user.books} : ${user.books.size()}---------------"
+        removingBook(user, Book.first())
 //        user.refresh()
-//        println "----------------------------------------"
-//        def books = user.books
-//        log.info "*********After remove :: User ${books} : ${books.size()}**********"
+        println "----------------------------------------"
+        def books = user.books
+        log.info "*********After remove :: User ${books} : ${books.size()}**********"
     }
 
     List<User> createUsers() {

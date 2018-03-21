@@ -50,4 +50,9 @@ class DemoController {
         ]
         render response as JSON
     }
+
+    def demo4() {
+//        to be executed after bootstrap has executed. This demo is independent of above demos.
+        render([booksOfNewUser: User.get(11).books] as JSON)
+    }
 }
