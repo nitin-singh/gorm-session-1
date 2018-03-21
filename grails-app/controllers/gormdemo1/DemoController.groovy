@@ -7,14 +7,29 @@ class DemoController {
     def index() {}
 
     def demo() {
-        User user = new User(name: "Nitin", email: "nitin.kumar@tothenew.com", dob: new Date() - 100, balance: 555)
-        user.name = null
-        user.validate()
         Map response = [
-                email    : user.validate(['email']),
-                name     : user.validate(['name']),
-                hasErrors: user.hasErrors(),
-                allErrors: user.errors.allErrors
+                userTotalCount: User.count()
+        ]
+        render(response as JSON)
+    }
+
+    def demo2() {
+        Map response = [
+                countByName: User.countByName("nitin")
+        ]
+        render(response as JSON)
+    }
+
+    def demo3() {
+        Map response = [
+                countByNameAndBalance: User.countByNameIlikeAndBalanceIsNotNull("%user%")
+        ]
+        render(response as JSON)
+    }
+
+    def demo4() {
+        Map response = [
+                countByNameIlikeOrBalanceInList: User.countByNameIlikeOrBalanceInList("%user%", [1000, 2000, 3000])
         ]
         render(response as JSON)
     }
